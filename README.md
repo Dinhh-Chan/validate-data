@@ -77,13 +77,9 @@ Link gốc (repo, Google Drive) ghi trong README của từng công cụ.
 4. **PDLogger là bản tái hiện** (gpt-4o-mini, không Joern). Các công cụ khác dùng output gốc của tác giả hoặc của AL-Bench.
 5. **T5 tranh cãi được**, chỉ dùng để minh hoạ.
 
-## 7. Câu hỏi muốn xin ý kiến thầy
 
-1. Các loại T1–T4 có đủ thuyết phục để làm phần "motivation" trước khi đề xuất CA / ER / RPA không?
-2. Phát hiện về **dòng trống của AL-Bench** (làm khoảng 23% output UniLog bị chấm sai vị trí) có nên đưa vào bài như một phát hiện về benchmark không?
-3. Có nên tái hiện SCLogger trên AL-Bench (bản xấp xỉ, prompt chép từ hình), hay email xin output của tác giả?
 
-## 8. Cách tạo lại
+## 7. Cách tạo lại
 
 ```bash
 cd analysis/external_methods
