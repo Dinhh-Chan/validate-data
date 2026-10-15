@@ -1,0 +1,562 @@
+sample_id,verdict_verifier,giai_thich,PA,PDLogger_PA@1,CA,ER,RPA,loi_cua_PDLogger_qua_C1_C5
+O:acs-aem-tools_ClientLibraryListener_handleEvent.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:acs-aem-tools_ComponentIconHealthCheck_execute.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:acs-aem-tools_FiddleHelperImpl_getCodeTemplate.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:acs-aem-tools_FiddleResourceProviderImpl_refresh.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_AMQ1730Test_onMessage.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_AMQ1893Test_produceMessages.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ2580Test_initConnection.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:activemq_AMQ3324Test_testTempMessageConsumedAdvisoryConnectionClose.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ3454Test_testSendWithLotsOfDestinations.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_AMQ3674Test_removeSubscription.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_AMQ3932Test_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ3992Test_testDurableConsumerEnqueueCountWithZeroPrefetch.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_AMQ4157Test_testPublishCountsWithRollbackConsumer.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_AMQ4472Test_testLostMessage.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_AMQ4582Test_simpleTest.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_AMQ4887Test_doTestBytesMessageSetPropertyBeforeCopy.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ4887Test_doTestStreamMessageSetPropertyBeforeCopy.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ4930Test_doTestBrowsePending.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ5421Test_testManyTempDestinations.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_AMQ5822Test_testReadCounter.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:activemq_AMQ6000Test_testResumeNotDispatching.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_AMQ6459Test_sendMessages.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_AMQ6459Test_testTempPercentUsageDecreases.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_AMQ7086Test_verifyFilesOnDisk.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_AbstractJDBCLocker_close.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_AbstractTempRegion_dispose.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_AbstractVirtualDestTest_exerciseVirtualTopic.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_ActiveMQConnectionFactory_createConnection.java,invalid,không chạy được,0,0,0,0,0,False
+O:activemq_ActiveMQSSLAdmin_createConnectionFactory.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_ActiveMQTestRunner_withPotentialTimeout.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_AdvisoryConsumer_dispatch.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_AmqpAndStompInteropTest_readMessageFromQueueUsingAmqp.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_AmqpAuthenticator_processSaslExchange.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_AmqpMaxFrameSizeTest_testMaxFrameSizeApplied.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_BatchedMessagePriorityConsumerTest_doTestBatchWithLowPriorityFirst.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_CommandJoiner_onCommand.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_ConcurrentDestinationCreationTest_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_ConnectionPerMessageTest_testConnectionPerMessage.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_ConsumerBean_waitForMessagesToArrive.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_ConsumerCommand_runTask.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_ConsumerEventSource_extractConsumerCountFromMessage.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_ConsumerEventSource_onMessage.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_ConsumerListenerTest_createConsumer.java,invalid,không chạy được,0,0,1,0,0,True
+O:activemq_CountStatisticTest_testStatistic.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:activemq_CreateLotsOfTemporaryQueuesTest_testCreateLotsOfTemporaryQueues.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_DLQRetryTest_assertRegisteredObjectName.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_DLQRetryTest_consumeRollbackMessage.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_DeadLetterTest_consumeAndRollback.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_DefaultQueueSender_main.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_DeleteMessage_handleRequest.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_DestinationSource_fireDestinationEvent.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_DestinationsPlugin_exportDestinations.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_DestinationsPlugin_importDestinations.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_DestinationsTest_testMod.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_DiscardingDLQBroker_sendToDeadLetterQueue.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_DiscardingDeadLetterPolicyTest_doTest.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_DiscoveryTransport_onServiceAdd.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_DuplexStartNpeTest_addConnection.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_DurableRedeliveryTest_testRedeliveryFlagAfterConnectionKill.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_DurableSubscriptionHangTestCase_produceExpiredAndOneNonExpiredMessages.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_DurableSubscriptionHangTestCase_registerDurableSubscription.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_DurableSubscriptionOffline2Test_testJMXCountersWithOfflineSubs.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:activemq_DurableSubscriptionOfflineBrowseRemoveTest_testBrowseRemoveBrowseOfflineSub.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_FailoverPrefetchZeroTest_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_InactivityMonitor_configuredOk.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_JDBCCommitExceptionTest_receiveMessages.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_JDBCConfigTest_testJdbcConfig.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_JMSClientRequestResponseTest_doTestRequestResponse.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_JMSEndpointStatsImpl_setParent.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_JMSMessageGroupsTest_readMessagesOnBroker.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_JMXRemoveQueueThenSendIgnoredTest_testRemoveQueueAndProduceBeforeNewConsumerAdded.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_JNDIReferenceFactory_createReference.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_JavaDestinationsTest_testMod.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_JmsCronSchedulerTest_onMessage.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_JmsQueueCompositeSendReceiveTest_testSendReceive.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_JmsQueueTopicCompositeSendReceiveTest_testSendReceive.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_JmsTimeoutTest_run.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_JmsTopicSendReceiveTest_setUp.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_JmsTopicSendReceiveWithEmbeddedBrokerAndUserIDTest_testSpoofedJMSXUserIdIsIgnored.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_JmsTopicSendReceiveWithTwoConnectionsTest_setUp.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_JmsTopicSendSameMessageTest_testSendReceive.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_JmsTransactedMessageOrderTest_sendMessages.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:activemq_JobSchedulerJmxManagementTests_testGetExecutionCount.java,invalid_insertion,,0,0,0,0,0,False
+O:activemq_JobSchedulerStoreCheckpointTest_testColocatedAddRemoveCleanup.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_JobSchedulerStoreTest_testRestart.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_JobSchedulerStoreUsageTest_testBlockAndChangeViaJmxReleases.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_KahaDBSchedulerMissingJournalLogsTest_testMissingLogsCausesBrokerToFail.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_KahaDBXARecoveryBrokerTest_testPreparedTransactionRecoveredPurgeRollbackOnRestart.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_LegacyStoreReplayer_startReplay.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_LegacyStoreReplayer_unload.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_ListenerTest_testComposite.java,invalid_insertion,,0,0,0,0,0,True
+O:activemq_LoadClient_run.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_LoadTest_setUp.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_LockableServiceSupport_stopBroker.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_MBeanNetworkListener_onStop.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_MKahaDBConfigTest_testBrokerConfig.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_MKahaDBIndexLocationTest_testIndexDirExists.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_ManagedTransportConnection_registerMBean.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_MemMessageIdList_waitForMessagesToArrive.java,invalid,không chạy được,0,0,0,0,0,True
+O:activemq_MirroredQueue_intercept.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_MulticastTransportTest_createProducer.java,invalid,không chạy được,0,0,1,0,0,True
+O:activemq_MulticastTransport_createCommandChannel.java,invalid,không chạy được,0,0,1,0,0,True
+O:activemq_NetworkRestartTest_testConnectorRestart.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_NoSpaceIOTest_testRunOutOfSpace.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_OutOfOrderTestCase_consumeBatch.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_PeerTransportTest_setUp.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_PerfConsumer_onMessage.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_PooledConnectionFactoryWithTemporaryDestinationsTest_testTemporaryQueueLeakAfterConnectionClose.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_PooledConnectionTest_testAllSessionsAvailableOnConstrainedPool.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_PriorityNetworkDispatchPolicy_dispatch.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_PropertiesLoader_baseDir.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_PropertiesLoader_init.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_PropertiesLoginModule_commit.java,invalid,không chạy được,0,0,0,0,0,False
+O:activemq_QueueMbeanRestartTest_verifyPresenceOfQueueMbean.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_QueueOrderSingleTransactedConsumerTest_consumeVerifyOrder.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_QueueRepeaterTest_onMessage.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_RedeliveryPluginTest_testInstallPluginValidation.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_RetroactiveConsumerWithMessageQueryTest_testConsumeAndReceiveInitialQueryBeforeUpdates.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_RollbacksWhileConsumingLargeQueueTest_onMessage.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:activemq_RollbacksWhileConsumingLargeQueueTest_testWithMessageListener.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:activemq_SelectorAwareVTThatDropsMessagesWhenNoConsumer_verifyNoDispatchDuringDisconnect.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_SelectorWorker_run.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:activemq_ServiceSupport_dispose.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:activemq_SharedFileLocker_doStart.java,invalid,không chạy được,0,0,0,0,0,False
+O:activemq_SimpleConnectionManager_connectionClosed.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_SimpleQueueSender_main.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_SoWriteTimeoutTest_testWriteTimeoutStompNio.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:activemq_StompInactivityMonitor_configuredOk.java,invalid,không chạy được,0,0,0,0,0,True
+O:activemq_StompMissingMessageTest_doTestProducerConsumer.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_StompTelnetTest_testCRLF11.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:activemq_TaskRunnerTest_doTestWakeup.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:activemq_TcpFaultyTransportFactory_createTransport.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:activemq_TcpTransportCloseSocketNoWarnTest_doTest.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_TempDestLoadTest_testLoadTempAdvisoryTopics.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:activemq_TempQueue_dispose.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_TimeStatisticTest_testStatistic.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:activemq_TopicClusterTest_testSendReceive.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_TransportConnectorMBeanTest_match.java,invalid,không chạy được,0,0,0,0,0,True
+O:activemq_TwoBrokerNetworkLoadBalanceTest_testLoadBalancing.java,invalid_insertion,,0,0,0,0,0,
+O:activemq_TwoSecureBrokerRequestReplyTest_testRequestReply.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_VMTransportWaitForTest_testWaitForNotStartedButInRegistry.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_VerifySteadyEnqueueRate_startBroker.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:activemq_VirtualTopicDestinationMapAccessTest_testX.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:activemq_VirtualTopicDisconnectSelectorTest_assertMessagesArrived.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:activemq_WSTransportLinkStealingTest_stopBroker.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_WSTransportTest_tearDown.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:activemq_WebConsoleStarter_contextInitialized.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:benchmark_NatsBenchmarkDriver_createTopic.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:benchmark_NatsStreamingBenchmarkDriver_initialize.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:benchmark_PravegaBenchmarkDriver_close.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:benchmark_PravegaBenchmarkDriver_deleteTopics.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:camus_KafkaAvroMessageDecoder_init.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:camus_RelaxedSchemaUtils_parseSchema.java,invalid,không chạy được,0,0,0,0,0,False
+O:camus_TimeReporter_report.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:confluence_http_authenticator_ShibLoginFilter_login.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:cryptomator_AppLaunchEventHandler_addOrRevealVault.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_ChangePasswordController_finish.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_Cryptomator_start.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:cryptomator_Environment_log.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,True
+O:cryptomator_FxApplicationStyle_applySystemTheme.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:cryptomator_FxApplicationWindows_visibleWindowsChanged.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_FxApplication_start.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:cryptomator_IpcCommunicator_create.java,invalid,không chạy được,0,0,0,0,0,False
+O:cryptomator_MasterkeyFileLoadingStrategy_savePasswordToSystemkeychain.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:cryptomator_MountWithinParentUtil_prepareParentNoMountPoint.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:cryptomator_RecoveryKeyDisplayController_printRecoveryKey.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:cryptomator_RegisterDeviceController_handleResponse.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:cryptomator_SettingsProvider_save.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_SettingsProvider_tryLoad.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_StartController_loadedKey.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:cryptomator_UnlockSuccessController_close.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:cryptomator_UnlockSuccessController_revealAndClose.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:cryptomator_UpdateChecker_checkSucceeded.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cryptomator_VaultListController_addVault.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:cxf-fediz_AbstractSamlResponseCreator_encodeResponse.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cxf-fediz_AbstractSamlResponseCreator_signResponse.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:cxf-fediz_ApplicationProtocolControllerImpl_getProtocolHandler.java,invalid,không chạy được,0,0,0,0,0,True
+O:cxf-fediz_ApplicationServiceImpl_updateApplication.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:cxf-fediz_ClientIdHomeRealmDiscovery_handle.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:cxf-fediz_LoginHintHomeRealmDiscovery_handle.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:cxf-fediz_ParameterSizeChecker_submit.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:cxf-fediz_RealmExtensionIdentityMapper_mapPrincipal.java,invalid,không chạy được,0,0,0,0,0,False
+O:cxf-fediz_STSPortFilter_doFilter.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:cxf-fediz_STSPreAuthAuthenticationProvider_handlePreAuthenticated.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:cxf-fediz_STSUPAuthenticationProvider_getCustomSTSParameterValue.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:cxf-fediz_STSUPAuthenticationProvider_handleUsernamePassword.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cxf-fediz_SamlResponseCreator_createSAML2Assertion.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:cxf-fediz_SigninParametersCacheAction_store.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:cxf-fediz_TrustedIdpDAOJPAImpl_updateTrustedIDP.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:feeyo-redisproxy_ProactiveGcTaskDemo_makeGarbage.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:feeyo-redisproxy_Util_uncompress.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:find-sec-bugs_BugInstanceMatcherBuilder_mapJspToJavaLine.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:find-sec-bugs_EasyBugReporter_doReportBug.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:find-sec-bugs_FindBugsLauncher_analyze.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:forest_CapabilitySubResource_subResource.java,invalid,không chạy được,0,0,0,0,0,True
+O:forest_FormCapability_mapArguments.java,invalid,không chạy được,0,0,0,0,0,True
+O:gateleen_BufferBridge_doWrite.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:gateleen_EventBusCollector_afterConnectionEstablished.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:gateleen_KafkaConfigurationParser_parse.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:gateleen_KafkaMessageSender_sendMessages.java,invalid_insertion,,0,0,0,0,0,
+O:gateleen_LocalRouteRepository_removeRoute.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:gateleen_MonitoringTest_testStorageMetrics.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:gateleen_PropertyHandler_addProperty.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:gateleen_RecursiveZipRootHandler_handle.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:gateleen_RequestLogger_logRequest.java,invalid_insertion,,0,0,0,0,0,
+O:gateleen_ResetMetrics_removeMetric.java,invalid_insertion,,0,0,0,0,0,
+O:gateleen_RouteRepositoryBase_cleanupRoute.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:gateleen_RuleFeaturesProvider_collectRuleFeatures.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:geronimo_AnnotationProcessor_invokePostConstruct.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_AnnotationProcessor_invokePreDestroy.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_Axis2ClientConfigurationFactory_clearCache.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:geronimo_Axis2ClientConfigurationFactory_getConfigurationContext.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:geronimo_ConfirmCertificateHandler_renderView.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_ConnectorWrapperGBeanStarter_buildConnectorGBean.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:geronimo_CreateDestinationHandler_processAction.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_DatabaseDriverExtender_addingBundle.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:geronimo_DerbySystemGBean_doStart.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:geronimo_DerbySystemGBean_doStop.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:geronimo_GeronimoLoginConfiguration_addConfiguration.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:geronimo_GeronimoLoginConfiguration_memberRemoved.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:geronimo_GeronimoPolicyConfigurationFactory_getGeronimoPolicyConfiguration.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:geronimo_GreeterImpl_greetMe.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:geronimo_JAXWSBean_greetMe.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:geronimo_JexlConditionParser_evaluate.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:geronimo_JexlExpressionParser_evaluate.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:geronimo_ListRequestsVerifyHandler_actionAfterView.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_MBeanServerKernelBridge_register.java,invalid,không chạy được,0,0,0,0,0,False
+O:geronimo_MBeanServerKernelBridge_unregister.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:geronimo_POJOEndpoint_stop.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:geronimo_ParsingTest_parse.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:geronimo_PersistenceManager_initializeEntityManagerFactory.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:geronimo_ResourceBinding_preprocessVaue.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:geronimo_SAAJUniverse_set.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:geronimo_SendMessageHandler_renderView.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:geronimo_SetupCAHandler_actionAfterView.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_SimpleWARWebServiceFinder_discoverWebServices.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:geronimo_StartClientCommand_doExecute.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:geronimo_SystemProperties_setProperties.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:geronimo_TestGBean_checkCluster.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:geronimo_URLConfigurator_getConfigurator.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:geronimo_UnlockKeystoreHandler_actionAfterView.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:geronimo_ViewCertificateHandler_renderView.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:geronimo_ViewMessagesRenderer_onMessage.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:geronimo_WaitForServerCommand_doExecute.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:gravitee-api-management_FlowServiceImpl_findByReference.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:gravitee-api-management_FlowServiceImpl_save.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:gravitee-api-management_MockEndpointConnector_getStateInitValue.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:gravitee-api-management_PolicyChain_executePolicy.java,invalid,không chạy được,0,0,1,0,0,True
+O:gravitee-api-management_ResourceLoader_load.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:gravitee-api-management_SecurityPolicyFactory_forPlan.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:hdt-java_HDTGraphAssembler_open.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:iaf_BuildInfoValidator_read.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:iaf_DelayPipe_doPipe.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:iaf_FixedErrorMessageFormatter_format.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:iaf_LdapFindMemberPipe_doPipeWithException.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:iaf_ListenerMessageHandler_getMessageFromQueue.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:iaf_MailFileSystemUtils_getValidAddress.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:iaf_MessageDispatcher_scan.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:iaf_MonitoringPipeProcessor_processPipe.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:iaf_ParallelSenderExecutor_run.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:iaf_SendMessageJob_execute.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:iaf_ThreadConnector_abortThread.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:inchain_AntiCounterfeitingController_getPage.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:inchain_AntifakeCodeMakeTransactionTest_makeAntifakeCode.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:inchain_BlockMessageProcess_process.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:inchain_BroadcastResult_addReply.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:inchain_ChangeCertAccountPasswordController_encryptWallet.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:inchain_CreditCollectionServiceImpl_onload.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:inchain_InchainInstance_startup.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:inchain_InchainKit_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:inchain_LocalTransactionSigner_signInputs.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:inchain_MainServer_shutdown.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:inchain_RegisterAccount_main.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:inchain_SetAliasController_doSave.java,invalid,không chạy được,0,0,0,0,0,True
+O:inchain_SystemSettingsController_getPage.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:inchain_UpdateAliasController_doSave.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:inchain_VerackMessageProcess_process.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:incubator-sentry_SentryPolicyProviderForDb_write.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:incubator-sentry_SentryUpdater_getUpdates.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:jate_ATTF_execute.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:jate_AppBasic_extract.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:jate_AppComboBasic_extract.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:jate_ContainmentReverseBuilder_build.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:jate_FrequencyCtxDocBasedFBWorker_computeSingleWorker.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:jate_FrequencyCtxSentenceBasedFBWorker_computeSingleWorker.java,invalid,không chạy được,0,0,0,0,0,True
+O:jate_WordShapeFBWorker_computeSingleWorker.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:jollyday_ConfigurationProviderManager_addCustomConfigurationProviderProperties.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:jollyday_DefaultConfigurationProvider_getProperties.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:jollyday_URLConfigurationProvider_readPropertiesFromURL.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:jsr354-ri_LoadDataService_execute.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:jsr354-ri_LoadRemoteDataService_execute.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:jsr354-ri_LoaderConfigurator_getClassLoaderLocation.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:jsr354-ri_URLConnectionResourceCache_clear.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:ma-core-public_BasePooledProxy_initializeImpl.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:ma-core-public_DBConvert_copyTable.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:ma-core-public_EmailWorkItem_execute.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:ma-core-public_JsonDataDao_toRecord.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:ma-core-public_KeyStoreWatcher_doCheck.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:ma-core-public_KeyStoreWatcher_restartWatchService.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:ma-core-public_KeyStoreWatcher_stopWatchService.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:ma-core-public_RollingIOLog_sizeCheck.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:ma-core-public_SerialServerSocketBridgeOutputStream_flush.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:ma-core-public_SystemSettingsListenerProcessor_postProcessAfterInitialization.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:micro-integrator_Axis2ServerTestExtension_onTestStart.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_BatchRequestTestCase_deleteOperation.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_CARBON15046JsonGsonNUllValueTest_returnNullValueInJsonObjectsOnGETTestCase.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_CARBON15928JMXDisablingTest_createDataSource.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:micro-integrator_CAppDeactivateAndRestartTestCase_uploadCarFileTest.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_CSVDataServiceTestCase_selectOperation.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_CSVSampleTestCase_testGetProducts.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:micro-integrator_CustomTaskImpl_execute.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_DS1042GetContentTypeSpecifiedTestCase_contentTypetestWithJson.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_DSSXATransactionManager_begin.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:micro-integrator_DataSourceInitializationAtStartUpTestCase_selectOperation.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_DataTypesTestCase_insertTimestampDefaultValueTest.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_EIMigrationServiceComponent_migrateSecrets.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_ESBJAVA4450TestCase_stopFTPServer.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_ESBServerExtension_configureServer.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_ExternalVaultResource_handleHashiCorpPost.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_FaultDBExceptionTestCase_testExceptionForUnavailableDB.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_FaultyDataServiceTestCase_editFaultyService.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:micro-integrator_FaultyDataServiceTestCase_serviceInvocation.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_GRPCResponseSender_sendBack.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_HL7MessageServiceComponent_activate.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_HL7TransportListener_doInit.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_HL7TransportListener_stopEndpoint.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_InMemoryDSSampleTestCase_initialize.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_InOnlyRequestsServiceTestCase_insertOperation.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_InboundHL7IOReactor_bind.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:micro-integrator_InboundHL7IOReactor_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_InboundOneTimeTriggerRequestProcessor_destroy.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_InboundRequestProcessorImpl_destroy.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_InboundRequestProcessorImpl_start.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_JMXClient_connect.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_JNDIUtil_closeNamingEnumeration.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_JWTConfig_populateJWTConfigDTO.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_JWTTokenSecurityHandler_authenticate.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_KAFKAProcessor_init.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_LargeCacheTimeOutTestCase_testLargeCacheTimeOut.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:micro-integrator_LogMaskConverter_loadMaskingPatterns.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_MIMigrationServiceComponent_activate.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_MessageProcessorSOAPHeadersTestcase_testPreservationOfSoapHeadersMSMPScennario.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_MicroIntegratorRegistryListener_saveFileChanges.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_MqttAsyncCallback_connectionLost.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_MqttAsyncCallback_reConnect.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:micro-integrator_MqttConnectionConsumer_execute.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_MultiMessageReceiver_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_NestedQueryTestCase_getCustomerOrdersNestedQuery.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micro-integrator_PatchInstaller_perform.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:micro-integrator_PlainTextEnrichmentTest_convertPlainTextMessageToSOAP.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:micro-integrator_RESTBasicAuthHandler_handleRequest.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:micro-integrator_RESTBasicAuthHandler_processSecurity.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:micro-integrator_RabbitMQInjectHandler_onMessage.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:micro-integrator_RabbitMQRecoveryListener_handleRecovery.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_ReadinessResource_invoke.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_RelationAdminServiceClient_addAssociation.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_RelationAdminServiceClient_getDependencies.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_RoleResource_handleGet.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_SQLDriverDSComponent_activate.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_Sample254TestCase_setEnvironment.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_SampleAxis2Server_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_Scenario14TestBase_executeTest.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:micro-integrator_ServiceCatalogDeployer_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_SmooksMediatorConfigFromLocalEntryTestCase_testSendingToSmooks.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:micro-integrator_StartTlsResponseWrapper_close.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_StartupAdminService_getAllTaskDescriptions.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_StartupAdminService_getPropertyNames.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_StartupFinalizer_setServerStartTimeParam.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:micro-integrator_TCPClient_sendMessage.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:micro-integrator_TLConnectionStore_commitNonXAConns.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:micro-integrator_TaskStoreCleaner_clean.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:micro-integrator_TranportCleanupOnFaultTest_transportCleanupOnFaultTest.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,True
+O:micro-integrator_TransactionCountHandler_handleTransactionCount.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:micro-integrator_UserStoreDeploymentManager_undeploy.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:micro-integrator_WebResourceSampleTestCase_selectOperation.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:micro-integrator_WebSocketInboundTestCase_destroy.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:micro-integrator_WebsocketSubscriberPathManager_removeChannelContext.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:micro-integrator_WireMonitorServer_start.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:micrometer-jvm-extras_ProcfsReader_readPath.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:neo4j_AuthenticationTimeoutConnectionListener_onRequestReceived.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:neo4j_BoltChannelInitializer_initChannel.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:neo4j_Build_getProperties.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:neo4j_CorsFilter_addAllowedMethodIfValid.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:neo4j_DatabaseHealth_panic.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:neo4j_DatabaseLifecycles_createDatabase.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:neo4j_DatabaseLifecycles_stopDatabase.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:neo4j_LockWorkFailureDump_dumpState.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:neo4j_Log4jLogProviderTest_getLogShouldReturnLogWithCorrectCategory.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:neo4j_NonInteractiveShellRunner_runUntilEnd.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:neo4j_TransactionMonitor_checkExpiredTransaction.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:nexu_CreateTokenOperation_perform.java,invalid,không chạy được,0,0,0,0,0,True
+O:openapi-diff_PendingChanged_setValue.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:openfire_AddGroupUsers_execute.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:openfire_JiveBeanInfo_getPropertyDescriptors.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:openfire_NewSubscriptionTask_run.java,invalid,không chạy được,0,0,0,0,0,True
+O:openfire_PacketTransporterImpl_deliver.java,invalid,không chạy được,0,0,0,0,0,True
+O:openfire_PluginCacheConfigurator_configure.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:openfire_PluginClassLoader_addURLFile.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:openfire_PresenceAccess_canSubscribe.java,invalid,không chạy được,0,0,0,0,0,False
+O:openfire_RefreshNodeTask_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:openfire_TempFileToucherTask_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:openfire_XMPPCallbackHandler_handle.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:openfire_XMPPServerInfoImpl_getHostname.java,invalid,không chạy được,0,0,0,0,0,False
+O:oxauth_ApplicationAuditLogger_loggingThroughFile.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_BackchannelDeviceRegistrationRestWebServiceImpl_requestBackchannelDeviceRegistrationPost.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_CIBAConfigurationService_processConfiguration.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_CertUtil_loadX509CertificateFromFile.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:oxauth_CibaEncryptionService_decrypt.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:oxauth_ClientAuthorizationsService_add.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:oxauth_ClientInfoRestWebServiceImpl_getJSonResponse.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_ClientInfoRestWebServiceImpl_requestClientInfo.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_ConsentGatheringSessionService_getClient.java,invalid,không chạy được,0,0,0,0,0,True
+O:oxauth_ConsentGatheringSessionService_getUserDn.java,invalid,không chạy được,0,0,0,0,0,True
+O:oxauth_CorsFilter_doFilter.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:oxauth_DeviceAuthorizationRestWebServiceImpl_deviceAuthorization.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_DeviceAuthzRequest_getParameters.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_ErrorResponse_toQueryString.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_ExpirationNotificatorTimer_process.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:oxauth_ExternalApplicationSessionService_executeExternalEndSessionMethod.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:oxauth_ExternalDynamicClientRegistrationService_executeExternalCreateClientMethod.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:oxauth_ExternalDynamicClientRegistrationService_getSoftwareStatementHmacSecret.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:oxauth_ExternalIdGeneratorService_executeExternalGenerateIdMethod.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:oxauth_ExternalRevokeTokenService_revokeToken.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_ExternalUmaClaimsGatheringService_gather.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_ExternalUmaClaimsGatheringService_getPageForStep.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_FirebaseCloudMessagingResponse_injectDataFromJson.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:oxauth_HashUtil_getHash.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_JwrService_createJwr.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_KeyExporter_parse.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_LanguageBean_getLocale.java,invalid,không chạy được,0,0,0,0,0,False
+O:oxauth_LdapStatusTimer_logConnectionProviderStatistic.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:oxauth_MTLSService_processMTLS.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_OpenIdConnectDiscoveryClient__exec.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:oxauth_PushTokenDeliveryClient__exec.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_RegistrationService_builRegisterRequestMessage.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_RevokeSessionClient_exec.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_RevokeSessionRestWebService_requestRevokeSession.java,invalid,không chạy được,0,0,0,0,0,False
+O:oxauth_ServerCryptoProvider_getKeyId.java,invalid,không chạy được,0,0,0,0,0,False
+O:oxauth_TokenBindingMessageParser_parseBytes.java,invalid,không chạy được,0,0,0,0,0,True
+O:oxauth_TokenResponse_injectDataFromJson.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:oxauth_U2fAuthenticationWS_finishAuthentication.java,invalid,không chạy được,0,0,0,0,0,True
+O:oxauth_U2fConfigurationWS_getConfiguration.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:oxauth_UmaMetadataWS_getConfiguration.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_UmaPermissionRegistrationWS_parseRequest.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_UmaResourceService_getResourceById.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:oxauth_UmaResourceService_getResourcesByAssociatedClient.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:oxauth_UmaScopeIconWS_getScopeDescription.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_UmaScopeWS_getScopeDescription.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_UmaSessionService_getConnectSession.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_UncaughtException_toResponse.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:oxauth_UserGroupService_loadGroup.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:pronghorn_CPUMonitor_getCPULoad.java,invalid,không chạy được,0,0,0,0,0,False
+O:pronghorn_LineSplitterFileChannelStage_run.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:proteus_OpenAPIDefaultServer_runInternal.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:proteus_ServerDefaultResponseListener_handleDefaultResponse.java,invalid,không chạy được,0,0,0,0,0,True
+O:reader_EMF_getEntityManagerProperties.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:reader_NetworkUtil_mapTcpPort.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:reader_RequestContextFilter_doFilter.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_AACAudio_addData.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:red5-server_AMFTunnelServlet_service.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_AVCVideoTest_testA7SliceBug.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:red5-server_AVCVideoTest_testCanHandleData.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:red5-server_AVCVideoTest_testRealisticFlow.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:red5-server_ArrayCollection_readExternal.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_ClientMethodHander_onStatus.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_DefaultWebSocketDataListener_onWSMessage.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_DerbyLogInterceptor_write.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:red5-server_FBLiveConnectTest_run.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:red5-server_FBLiveConnectTest_testFBLivePublish.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:red5-server_FileStreamSource_seek.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_GenericWriterPostProcessor_run.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:red5-server_GlobalScope_getStore.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:red5-server_InetAddressEditor_setAsText.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_JMXUtil_printMBeanInfo.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_MP4FrameTest_testSort.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:red5-server_MP4_getReader.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:red5-server_PluginLauncher_afterPropertiesSet.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_PluginRegistry_shutdown.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,True
+O:red5-server_PluginRegistry_unregister.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_ProxyFilter_messageReceived.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:red5-server_RTMPClient_disconnect.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:red5-server_RTMPClient_startConnector.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:red5-server_RTMPEClientTest_testProxy.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_RTMPHandshakeTest_fillBuffer.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:red5-server_RTMPMinaCodecFactory_decode.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_RTMPTProtocolEncoder_encodeCommand.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:red5-server_SOApplication_getAndCloseSO.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_SessionManager_setMaxLifetime.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:red5-server_StatusObjectService_cacheStatusObjects.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,False
+O:red5-server_TagFactory_createTag.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:red5-server_VideoCodecFactory_getVideoCodec.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:red5-server_XMLUtils_stringToDoc.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:red5-server_YouTubeConnectTest_testLocalhostRed5Publish.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:sherlock_ByteMapper_performUnmap.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:sherlock_EmailSenderTask_run.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:sherlock_LettuceDeletedJobMetadataAccessor_getDeletedJobMetadataList.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:sherlock_LettuceDeletedJobMetadataAccessor_putDeletedJobMetadata.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:sherlock_LettuceDruidClusterAccessor_getDruidClusterList.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:sherlock_LettuceDruidClusterAccessor_putDruidCluster.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:sonarlint-core_AnalysisEngine_executeQueuedCommands.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:sonarlint-core_GlobalAnalysisContainer_stopComponents.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:sonarlint-core_NotificationTimerTask_requestForServer.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:sonarlint-core_TelemetryLocalStorageManager_readAtomically.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:splitet_AutomaticTopicConfiguration_init.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:splitet_CommandExecutionInterceptor_before.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:splitet_OperationExpirationListener_entryExpired.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:splitet_ProducedEvent_attachHandler.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:spring-ws_Jaxp15ValidatorFactory_validate.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:spring-ws_SchemaFactoryUtils_newInstance.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:spring-ws_TransformerFactoryUtils_defaultSettings.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:starter-kit-spring-maven_BaseTest_runScripts.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:starter-kit-spring-maven_CandidateRestTriggerController_addEntity.java,invalid,không chạy được,0,0,1,0,0,True
+O:starter-kit-spring-maven_CandidateRestTriggerController_editEntity.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:starter-kit-spring-maven_CandidateWorkHistoryRestTriggerController_addEntity.java,invalid,không chạy được,0,0,1,0,0,True
+O:starter-kit-spring-maven_ClientCorporationRestTriggerController_addEntity.java,invalid,không chạy được,0,0,1,0,0,True
+O:starter-kit-spring-maven_JobOrderRestTriggerController_addEntity.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:starter-kit-spring-maven_JobSubmissionRestTriggerController_editEntity.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,True
+O:starter-kit-spring-maven_NoteRestTriggerController_editEntity.java,invalid,không chạy được,0,0,1,0,0,True
+O:starter-kit-spring-maven_OpportunityRestTriggerController_editEntity.java,invalid,không chạy được,0,0,1,0,0,True
+O:starter-kit-spring-maven_PlacementRestTriggerController_addEntity.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,True
+O:starter-kit-spring-maven_ScheduledEventProcessing_removeEventsThrownByApiUserAndMergeDuplicateEventsAsStandardEvents.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:starter-kit-spring-maven_ScheduledEventProcessing_run.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:starter-kit-spring-maven_SessionFilter_doFilterInternal.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,True
+O:starter-kit-spring-maven_StandardDateLastModifiedEventTaskHelper_process.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,True
+O:starter-kit-spring-maven_StandardEmailer_setRecipients.java,wrong_condition:disjoint,nhầm nhánh (không bao giờ cùng in),0,0,0,1,0,True
+O:testcontainers-spring-boot_EmbeddedAzuriteBootstrapConfiguration_azuriteBlobContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedCassandraBootstrapConfiguration_cassandra.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedClickHouseBootstrapConfiguration_registerClickHouseEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedConsulBootstrapConfiguration_consulContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedCouchbaseBootstrapConfiguration_couchbaseContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedCouchbaseBootstrapConfiguration_registerCouchbaseEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedDb2BootstrapConfiguration_db2ContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedGrafanaBootstrapConfiguration_grafanaContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedKeycloakBootstrapConfiguration_keycloakContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedLocalStackBootstrapConfiguration_localstackContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedMariaDBBootstrapConfiguration_mariadbContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedMongodbBootstrapConfiguration_registerMongodbEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedMySQLBootstrapConfiguration_registerMySQLEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedNatsBootstrapConfiguration_natsContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedNeo4jBootstrapConfiguration_neo4jContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedNeo4jBootstrapConfiguration_registerNeo4jEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedPrometheusBootstrapConfiguration_prometheusContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedPubsubBootstrapConfiguration_googlePubSubContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedPulsarBootstrapConfiguration_pulsarContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedRedisBootstrapConfiguration_redisContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedVaultBootstrapConfiguration_vaultContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedVerticaBootstrapConfiguration_registerVerticaEnvironment.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_EmbeddedVerticaBootstrapConfiguration_verticaContainerProxy.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:testcontainers-spring-boot_KafkaTopicsConfigurer_restrictTopics.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:togglz_FeatureContext_findFeatureManagerInClassLoader.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:togglz_ReleaseDateActivationStrategy_parseReleaseDate.java,wrong_condition:overlapping,điều kiện khác,0,0,0,1,0,False
+O:togglz_TogglzRule_evaluate.java,invalid,không chạy được,0,0,0,0,0,False
+O:webdrivermanager_CacheHandler_getDriverFromCache.java,log_order_changed,đổi thứ tự với log khác,0,0,1,1,0,False
+O:webdrivermanager_CacheTest_testCache.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:webdrivermanager_ChromeDriverManager_buildUrl.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:webdrivermanager_ChromeDriverManager_getCapabilities.java,wrong_condition:stronger,in quá ít / sai phạm vi (thừa điều kiện),0,0,0,1,0,False
+O:webdrivermanager_GenericCreateTest_test.java,order_changed,vượt qua một thao tác,0,0,1,1,0,True
+O:webdrivermanager_ResolutionCache_checkKeyInResolutionCache.java,wrong_condition:weaker,in quá thường (mất điều kiện),0,0,0,1,0,False
+O:webdrivermanager_ResolutionCache_putValueInResolutionCacheIfEmpty.java,order_changed,vượt qua một thao tác,0,0,1,1,0,False
+O:webdrivermanager_ServerResolverTest_testServerResolver.java,value_changed,giá trị biến được in đã đổi,0,0,1,1,0,False
+O:yahoofinance-api_ExchangeTimeZone_get.java,invalid,không chạy được,0,0,0,0,0,True

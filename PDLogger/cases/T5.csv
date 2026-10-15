@@ -1,0 +1,57 @@
+sample_id,verdict_verifier,giai_thich,PA,PDLogger_PA@1,CA,ER,RPA,loi_cua_PDLogger_qua_C1_C5
+O:activemq_AMQ2902Test_append.java,log_order_changed,đổi thứ tự với log khác,0,1,1,1,0,False
+O:activemq_AMQ3120Test_getFileCount.java,value_changed,giá trị biến được in đã đổi,0,1,1,1,0,True
+O:activemq_AMQ6293Test_sendTestMessages.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_DestinationListenerTest_testDestiationSourceHasInitialDestinations.java,log_order_changed,đổi thứ tự với log khác,0,1,1,1,0,False
+O:activemq_DurableSubCacheTest_append.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_ListenerTest_testSimple.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_MemoryBufferTestSupport_dump.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_MemoryMessageStoreQueueCursorTest_testRecoverNextMessages2.java,value_changed,giá trị biến được in đã đổi,0,1,1,1,0,True
+O:activemq_OfflineDurableSubscriberTimeoutTest_append.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_ReconnectWithSameClientIDTest_append.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_ReduceMemoryFootprintTest_testPropertyLostNonScheduled.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_ReduceMemoryFootprintTest_testPropertyLostScheduled.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_SelectorParserTest_testParseXPath.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_TcpTransportCloseSocketNoWarnTest_append.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_TransactionRollbackOrderTest_tearDown.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_TwoBrokerTopicSendReceiveTest_setUp.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_UdpTransportTest_createConsumer.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:activemq_UnreliableCommandDatagramChannel_sendWriteBuffer.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:activemq_XStreamWireFormatTest_assertBeanMarshalls.java,log_order_changed,đổi thứ tự với log khác,0,1,1,1,0,False
+O:cryptomator_DebugMode_setLogLevels.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:cryptomator_MainWindowTitleController_initialize.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:cryptomator_PassphraseEntryController_unlock.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:cxf-fediz_ClaimDAOJPAImpl_deleteClaim.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:cxf-fediz_CommonsURLValidator_setAdditionalTLDs.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:cxf-fediz_TrustedIdpDAOJPAImpl_deleteTrustedIDP.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:find-sec-bugs_SeamLogging_variousLogMessageUnsafe.java,log_order_changed,đổi thứ tự với log khác,0,1,1,1,0,False
+O:gateleen_LockUtil_acquireLock.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:gateleen_LuaScriptState_composeLuaScript.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:geronimo_EJBInterceptor_copyDataBindingInterceptors.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:geronimo_ParsingTest_testSchema2.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:geronimo_StartClientCommand_process.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:iaf_NamespaceUriProviderBean_afterPropertiesSet.java,log_order_changed,đổi thứ tự với log khác,0,1,1,1,0,False
+O:micro-integrator_ActiveMQServerExtension_onExecutionFinish.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_ArtifactDeploymentListener_addToUndeployedArtifactsQueue.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_InvokeOnErrorSequenceFromSwitchIntegrationTestCase_testSample2.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_LogMediatorLevelTest_testSendingToDefinedEndpoint.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:micro-integrator_MLLPSourceHandler_shutdownConnection.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_MultipleServicesGeneratorTestCase_testServiceDeployment.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:micro-integrator_NestedQueryTestCase_getCustomerOrders.java,order_changed,vượt qua một thao tác,0,1,1,1,0,True
+O:micro-integrator_ServerUtils_copyFolders.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_Soap11FaultCodeClientTestCase_testSOAP11FaultCodeClient.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_Soap11FaultCodeVersionMismatchedTestCase_testSOAP11FaultCodeVersionMismatched.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_Soap11FaultStringExpressionTestCase_testSOAP11FaultStringExpression.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:micro-integrator_Soap12FaultWithAttributeResponseFalseTestCase_testSOAP12FaultAttributeResponseFalse.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:openapi-diff_PendingChanged_mapOptional.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:red5-server_DebugProxyHandler_sessionCreated.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:sherlock_LettuceDruidClusterAccessor_getDruidClusterIds.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:sherlock_SecretProviderService_getKey.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:sonarlint-core_ProjectStorage_store.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:splitet_EventExecutionInterceptor_afterThrowing.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:splitet_KafkaOperationRepository_successOperation.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:starter-kit-spring-maven_TestCrypto_testBase64.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:starter-kit-spring-maven_TestCrypto_testRC4.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:starter-kit-spring-maven_TestCrypto_testTripleDES.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:webdrivermanager_EdgeDriverManager_postDownload.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False
+O:webdrivermanager_ResolutionCache_checkValidity.java,order_changed,vượt qua một thao tác,0,1,1,1,0,False

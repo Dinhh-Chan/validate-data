@@ -1,0 +1,20 @@
+id,verdict_verifier,giai_thich,vi_tri_khop_chinh_xac,level_dung,message_dung,CA,ER,RPA,gold_log,log_sinh_ra
+342,order_changed,vượt qua một thao tác,0,1,1,1,1,0,Log . info ( string ) ;,logger . info ( string ) ;
+511,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . info ( ""[Sedona-Viz][SaveVectormageAsLocalFile][Start]"" ) ;","logger . info ( ""[Sedona-Viz][SaveVectormageAsLocalFile][Start]"" ) ;"
+1992,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . info ( message ) ;,log . info ( message ) ;
+1993,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . error ( message , e ) ;","log . error ( message , e ) ;"
+2117,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . info ( ""Job scheduler shut down"" ) ;","logger . info ( ""Job scheduler shut down"" ) ;"
+2822,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . info ( ""handleNewSession. sessionId: {}."" , sessionId ) ;","LOG . info ( ""handleNewSession. sessionId: {}."" , sessionId ) ;"
+2844,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . info ( xml ) ;,log . info ( xml ) ;
+2879,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""Job {} reached terminal state {}."" , archivedExecutionGraph . getJobID ( ) , archivedExecutionGraph . getState ( ) ) ;","LOG . info ( ""Job {} reached terminal state {}."" , archivedExecutionGraph . getJobID ( ) , archivedExecutionGraph . getState ( ) ) ;"
+3355,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . debug ( ""Collecting stats from integrationId: {}"" , integrationId ) ;","LOGGER . debug ( ""Collecting stats from integrationId: {}"" , integrationId ) ;"
+4668,order_changed,vượt qua một thao tác,0,1,1,1,1,0,geodeLogger . debug ( logMessage ) ;,geodeLogger . debug ( logMessage ) ;
+5665,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"log . trace ( ""TRACE"" ) ;","log . trace ( ""TRACE"" ) ;"
+6269,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . debug ( ""Error occurred: "" , e ) ;","LOG . debug ( ""Error occurred: "" , e ) ;"
+6436,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,log . debug ( c ) ;,log . debug ( c ) ;
+6582,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . debug ( ""Writing file..."" ) ;","LOG . debug ( ""Writing file..."" ) ;"
+7080,order_changed,vượt qua một thao tác,0,1,1,1,1,0,originalLog . warn ( charSequence ) ;,LOG . warn ( charSequence ) ;
+9162,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""Iteration: "" + i ) ;","log . info ( ""Iteration: "" + i ) ;"
+10604,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""Received message from camel endpoint: '"" + endpointUri + ""'"" ) ;","log . info ( ""Received message from camel endpoint: '"" + endpointUri + ""'"" ) ;"
+11570,order_changed,vượt qua một thao tác,0,1,1,1,1,0,_log . warn ( sb . toString ( ) ) ;,_log . warn ( sb . toString ( ) ) ;
+11781,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . error ( ""Error when initializing server extension of type {}"" , extension , e ) ;","logger . error ( ""Error when initializing server extension of type {}"" , extension , e ) ;"

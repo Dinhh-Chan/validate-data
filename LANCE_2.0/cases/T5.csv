@@ -1,0 +1,62 @@
+id,verdict_verifier,giai_thich,vi_tri_khop_chinh_xac,level_dung,message_dung,CA,ER,RPA,gold_log,log_sinh_ra
+111,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . info ( ""The valkyrie receives an enchanted hammer."" ) ;","LOGGER . info ( ""The valkyrie receives an enchanted hammer."" ) ;"
+203,order_changed,vượt qua một thao tác,0,1,1,1,1,0,LOGGER . error ( line ) ;,log . error ( line ) ;
+387,order_changed,vượt qua một thao tác,0,1,1,1,1,0,logger . warn ( errorMessage ) ;,LOG . warn ( errorMessage ) ;
+1607,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"log . debug ( ""Using paper size: "" + papersize ) ;","log . debug ( ""Using papersize: "" + papersize ) ;"
+1691,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . error ( errorMessage ) ;,log . error ( errorMessage ) ;
+1708,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . debug ( ""{}.buildMakeSitePage()"" , this ) ;","log . debug ( ""{}.buildMakeSitePage()"" , this ) ;"
+1759,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""initDao template "" + getHibernateTemplate ( ) ) ;","log . info ( ""initDao template "" + getHibernateTemplate ( ) ) ;"
+1831,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""destroy()"" ) ;","log . info ( ""destroy()"" ) ;"
+2544,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . error ( """" , e ) ;","LOGGER . error ( """" , e ) ;"
+2700,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"LOGGER . debug ( ""Type:"" + message . getType ( ) . getValue ( ) ) ;","LOGGER . debug ( ""Type: "" + message . getType ( ) . getValue ( ) ) ;"
+3164,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . debug ( ""done with continuation account, proceeeding with remaining pre rules"" ) ;","LOG . debug ( ""done with continuation account, proceeeding with remaining pre rules"" ) ;"
+3337,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . debug ( ""PcapWriterHandler is now closed"" ) ;","logger . debug ( ""PcapWriterHandler is now closed"" ) ;"
+3581,value_changed,giá trị biến được in đã đổi,0,1,1,1,1,0,"logger . trace ( ""Channel {} active"" , ctx . channel ( ) ) ;","logger . trace ( ""Channel {} active"" , ctx . channel ( ) ) ;"
+3952,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . error ( msg , cause ) ;","LOG . error ( msg , cause ) ;"
+4300,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . error ( error ) ;,logger . error ( error ) ;
+5725,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"LOG . error ( message , e ) ;","LOGGER . error ( message , e ) ;"
+6047,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . error ( ex ) ;,log . error ( ex ) ;
+7012,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""Requesting 1st unisolated connection."" ) ;","log . info ( ""Requesting 1st unisolated connection."" ) ;"
+7941,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . info ( ""Stream has been updated"" ) ;","LOGGER . info ( ""Stream has been updated"" ) ;"
+8289,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,logger . info ( buffer . toString ( ) ) ;,logger . info ( buffer . toString ( ) ) ;
+8470,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . info ( ""End Load"" ) ;","LOG . info ( ""End Load"" ) ;"
+8766,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"_logger . error ( ""{} Manager: Error on initialization"" , this . getClass ( ) . getName ( ) , t ) ;","_logger . error ( ""{} Manager: Error on initialization"" , this . getClass ( ) . getName ( ) , t ) ;"
+9014,order_changed,vượt qua một thao tác,0,1,1,1,1,0,LOG . info ( msg ) ;,LOG . info ( msg ) ;
+9736,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . debug ( ""processInsert: "" + row . toString ( ) ) ;","LOGGER . debug ( ""processInsert: "" + row . toString ( ) ) ;"
+9874,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"LOG . info ( ""Helix rest server started!"" ) ;","LOG . info ( ""Helix rest server started!"" ) ;"
+10115,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . debug ( ""Writing file..."" ) ;","LOG . debug ( ""Writing file..."" ) ;"
+10518,order_changed,vượt qua một thao tác,0,1,1,1,1,0,LOG . info ( message ) ;,log . info ( message ) ;
+10721,order_changed,vượt qua một thao tác,0,1,1,1,1,0,LOG . info ( msg ) ;,LOG . info ( msg ) ;
+10776,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"LOG . info ( ""Purge task completed."" ) ;","LOG . info ( ""Purge task completed."" ) ;"
+10797,value_changed,giá trị biến được in đã đổi,0,1,1,1,1,0,"LOG . info ( ""connectToLearnerMasterLimit set to {}"" , connectToLearnerMasterLimit ) ;","LOGGER . info ( ""connectToLearnerMasterLimit set to {}"" , connectToLearnerMasterLimit ) ;"
+11005,value_changed,giá trị biến được in đã đổi,0,1,1,1,1,0,"LOG . debug ( ""execute procedure "" + this + "" step="" + step ) ;","LOG . debug ( ""execute procedure "" + this + "" step="" + step ) ;"
+11564,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""Starting task: %s"" , taskID ) ;","log . info ( ""Starting task: %s"" , taskID ) ;"
+11716,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . info ( StringDecorator . decorate ( componentId , tuple . toString ( ) ) ) ;","LOG . info ( StringDecorator . decorate ( componentId , tuple . toString ( ) ) ) ;"
+11794,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"getLog ( ) . info ( ""After modification, myDirectory is: "" + project . getProperties ( ) . getProperty ( ""myDirectory"" ) ) ;","getLog ( ) . info ( ""After modification, myDirectory is: "" + project . getProperties ( ) . getProperty ( ""myDirectory"" ) ) ;"
+11913,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . info ( ""Destroyed {} plugin"" , plugin . getName ( ) ) ;","LOG . info ( ""Destroyed {} plugin"" , plugin . getName ( ) ) ;"
+12334,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . debug ( ""log"" ) ;","logger . debug ( ""log"" ) ;"
+13049,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOGGER . info ( ""Stopping session in {}."" , this ) ;","LOGGER . info ( ""Stopping session in {}."" , this ) ;"
+14497,value_changed,giá trị biến được in đã đổi,0,1,1,1,1,0,"logger . error ( e . getMessage ( ) , e ) ;","logger . error ( e . getMessage ( ) , e ) ;"
+14542,order_changed,vượt qua một thao tác,0,1,1,1,1,0,LOG . info ( str ) ;,log . info ( str ) ;
+14753,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . trace ( ""finished job "" + getUniqueName ( ) + "" with order "" + order ) ;","LOG . trace ( ""finished job "" + getUniqueName ( ) + "" with order "" + order ) ;"
+16109,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . info ( new String ( writer . getBody ( ) ) ) ;,log . info ( new String ( writer . getBody ( ) ) ) ;
+16122,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . info ( new String ( writer . getBody ( ) ) ) ;,log . info ( new String ( writer . getBody ( ) ) ) ;
+17116,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . info ( ""Test run time: {}"" , stopwatch . toString ( ) ) ;","LOG . info ( ""Test run time: {}"" , stopwatch . toString ( ) ) ;"
+17290,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . error ( e . getLocalizedMessage ( ) , e ) ;","LOG . error ( e . getLocalizedMessage ( ) , e ) ;"
+19703,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . info ( ""[keeperDead]{}"" , keeperKey ) ;","logger . info ( ""[keeperDead]{}"" , keeperKey ) ;"
+20064,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"Log . debug ( threadName + "": Thread run() started"" ) ;","Log . debug ( threadName + "": Thread run() started"" ) ;"
+20755,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . debug ( ""sending "" + SUBJECT_MATCH + "" to "" + toEmail ) ;","logger . debug ( ""sending "" + SUBJECT_MATCH + "" to "" + toEmail ) ;"
+21489,order_changed,vượt qua một thao tác,0,1,1,1,1,0,log . info ( paths . toString ( ) ) ;,LOG . info ( paths . toString ( ) ) ;
+21814,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"log . error ( ""detect Exception"" , e ) ;","log . error ( ""detect Exception"" , e ) ;"
+22399,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"testLog . info ( ""testLeaderTransferSkippedOnShutdownWithNoFollowers ending"" ) ;","testLog . info ( ""testLeaderTransferSkippedOnShutdownWithNoFollowers ending"" ) ;"
+23708,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . debug ( ""Handler disposed."" ) ;","logger . debug ( ""Handler disposed."" ) ;"
+24226,order_changed,vượt qua một thao tác,0,1,1,1,1,0,_specificLogger . info ( msg ) ;,LOGGER . info ( msg ) ;
+24405,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"LOG . trace ( ""Updated {} rows"" , result ) ;","LOG . trace ( ""Updated {} rows"" , result ) ;"
+25238,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"LOGGER . error ( e . getMessage ( ) , e ) ;","log . error ( e . getMessage ( ) , e ) ;"
+26723,order_changed,vượt qua một thao tác,0,1,1,1,1,0,logger . debug ( info ) ;,logger . debug ( info ) ;
+26746,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"logger . info ( String . valueOf ( index ) + "": "" + ""hello world"" ) ;","logger . info ( String . valueOf ( index ) + "": "" + ""hello world"" ) ;"
+26755,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"_logger . debug ( ""This is a debug"" ) ;","_logger . debug ( ""This is a debug"" ) ;"
+26824,log_order_changed,đổi thứ tự với log khác,0,1,1,1,1,0,"log . debug ( "" totalMemory "" + totalMemory ) ;","log . debug ( "" totalMemory "" + totalMemory ) ;"
+26973,order_changed,vượt qua một thao tác,0,1,1,1,1,0,logger . info ( line ) ;,LOG . info ( line ) ;
+27490,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . info ( ""BookReader.unused() got "" + event ) ;","log . info ( ""BookReader.unused() got "" + event ) ;"
+27789,order_changed,vượt qua một thao tác,0,1,1,1,1,0,"log . trace ( ""endpointActivation()"" ) ;","log . trace ( ""endpointActivation()"" ) ;"

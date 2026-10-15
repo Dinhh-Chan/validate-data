@@ -1,0 +1,6 @@
+sample_id,verdict_verifier,giai_thich,PA,PDLogger_PA@1,CA,ER,RPA,loi_cua_PDLogger_qua_C1_C5
+O:activemq_TempTopic_addSubscription.java,equivalent_move,lệch nhưng tương đương,0,0,1,1,1,
+O:geronimo_SAAJUniverse_unset.java,equivalent_move,lệch nhưng tương đương,0,0,1,1,1,
+O:inchain_UnitNetworkParams_getGengsisBlock.java,equivalent_move,lệch nhưng tương đương,0,0,1,1,1,
+O:reader_FaviconUpdateRequestedAsyncListener_onFaviconUpdateRequested.java,equivalent_move,lệch nhưng tương đương,0,0,1,1,1,
+O:sherlock_RecoverableThreadScheduler_afterExecute.java,equivalent_move,lệch nhưng tương đương,0,0,1,1,1,
