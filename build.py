@@ -508,35 +508,141 @@ def build_pdlogger():
 
 
 def build_sclogger():
+    """SCLogger: approximate re-implementation on AL-Bench / Hadoop 3.4.0 (analysis/sclogger_repro)."""
     folder = HERE/'SCLogger'; folder.mkdir(exist_ok=True)
-    (folder/'README.md').write_text('\n'.join([
-        '# SCLogger: chưa có output thật để lấy ví dụ', '',
-        '**Paper:** Li et al. *Go Static: Contextualized Logging Statement Generation*. FSE 2024. arXiv 2402.12958.', '',
-        '## Vì sao không có trường hợp sai cụ thể', '',
-        '- **Không có output công khai.** Repo `github.com/YichenLi00/SCLogger` ghi "Under Construction", chỉ có vài file Java phân tích tĩnh (`CodeSlicer.java`, `VarRefine.java`, `AvaVarList.java`) và script baseline LANCE. Không có dữ liệu, prediction, prompt hay script đánh giá. AL-Bench cũng bỏ SCLogger vì lý do này.',
-        '- **Prompt chỉ có dạng hình ảnh** (Fig. 6 trong paper), không có bản text nguyên văn.',
-        '- **Cần ngữ cảnh toàn project** (chuỗi lời gọi method, log slice, kiểu biến, 5 ví dụ mẫu BM25 cùng project). Dataset kiểu LANCE / LogBench chỉ có method rời; chính paper nói đây là lý do không dùng dataset LANCE.', '',
-        '## Metric của SCLogger chấm sai thế nào (đã chứng minh trên output thật)', '',
-        '- **Vị trí:** *"PA as 1 … if the distance between the predicted line number and the actual line number is less than or equal to one line and both … must be within the same block"* (§4.3.1). **Giống hệt PDLogger.**',
-        '- **Nội dung:** *"we only calculate the metrics for what-to-log when the logging position … is predicted correctly"* (§4.3.2).', '',
-        'Hệ quả: trên output thật của PDLogger (`../PDLogger/`), metric này chấm **đúng** 30 log không chạy được (T1). Theo cách chấm của SCLogger, các log đó còn được **cộng thêm** điểm level, biến, BLEU, ROUGE, vì nội dung chỉ được chấm khi vị trí "đúng". Metric này cũng chấm 0 cho các log đặt đúng (T3 của PDLogger).', '',
-        '## Có thể làm thêm', '',
-        '1. **Tái hiện trên AL-Bench:** AL-Bench có đường dẫn file trong 10 project thật và output của 5 công cụ khác trên cùng mẫu. Phân tích tĩnh có thể dùng chính code `CodeSlicer.java` của tác giả; prompt phải chép từ hình Fig. 6, nên phải ghi là bản xấp xỉ. Cần kiểm trước xem `CodeSlicer.java` có chạy được không.',
-        '2. **Email tác giả** xin output trên test set của họ.', '']))
+    R = HERE.parent/'sclogger_repro'/'run'
+    if not (R/'scored.jsonl').exists():
+        return None
+    Pp = {json.loads(l)['id']: json.loads(l) for l in (R/'prepared.jsonl').open()}
+    Oo = {json.loads(l)['id']: json.loads(l) for l in (R/'outputs.jsonl').open()}
+    S_ = [json.loads(l) for l in (R/'scored.jsonl').open()]
+    ok = [d for d in S_ if d['status'] == 'ok']
+    st = collections.Counter(d['status'] for d in S_)
+    B = lambda d: d['before']
+    def lvl_ok(d): return lvl(d['gold']) is not None and lvl(d['gold']) == lvl(d['statement'] or '')
+    def msg_ok(d): return msg(d['gold']) == msg(d['statement'] or '')
+    t1 = [d for d in ok if B(d)['pa1'] and not B(d)['er']]
+    t3 = [d for d in ok if not B(d)['pa1'] and B(d)['rpa']]
+    t4 = [d for d in ok if not B(d)['pa1'] and not B(d)['rpa']]
+    t5 = [d for d in ok if B(d)['pa1'] and not B(d)['rpa'] and B(d)['er']]
+    both = sum(1 for d in ok if not B(d)['rpa'] and isinstance(d.get('after'), dict) and 'rpa' in d['after'] and not d['after']['rpa'])
+    wrong = sum(1 for d in ok if not B(d)['rpa'])
+    mean = lambda conv, m: 100 * sum(d[conv][m] for d in ok if 'rpa' in d.get(conv, {})) / max(1, sum('rpa' in d.get(conv, {}) for d in ok))
+    def scode(d):
+        Ls = Pp[d['id']]['lines']; g, k = d['gold_line'], B(d)['pred_line']; out = []
+        for j, l in enumerate(Ls + ['']):
+            if j == g: out.append('G>  ' + d['gold'])
+            if j == k: out.append('P>  ' + (d['statement'] or ''))
+            if j < len(Ls): out.append('    ' + l[:160])
+        return '```java\n' + '\n'.join(out) + '\n```'
+    def sio(d):
+        o = Oo[d['id']]; pr = Pp[d['id']]
+        parts = [details('Prompt ngữ cảnh đầy đủ (khuôn chép từ Fig. 6; code, code slice, log slice, danh sách biến, 5 ví dụ BM25)', fence('text', pr['prompt'])),
+                 details(f'Output lần 1 của LLM (cách đọc: <code>{o.get("parse_initial")}</code>)', fence('text', o['initial_raw']))]
+        if o.get('refined'):
+            parts += [details('Prompt tinh chỉnh biến (lượt 2)', fence('text', o['refine_prompt'])),
+                      details(f'Output lượt 2 (cách đọc: <code>{o.get("parse_refined")}</code>)', fence('text', o['refined_raw'] or ''))]
+        parts.append(f'*Output cuối: `<Line Number>: {o["line_1based"]}` → log nằm ở dòng {o["line_1based"]} (chèn trước dòng đó của input); câu log `{o["statement"]}`.*')
+        return '\n\n'.join(parts)
+    (folder/'cases').mkdir(exist_ok=True)
+    for f in (folder/'cases').glob('*'): f.unlink()
+    sets = {'T1': t1, 'T3': t3, 'T4': t4, 'T5': t5}
+    for t, sel in sets.items():
+        with (folder/'cases'/f'{t}.csv').open('w', newline='') as f:
+            w = csv.writer(f); w.writerow(['albench_id', 'verdict_verifier', 'giai_thich', 'PA', 'SCLogger_PA@1', 'CA', 'ER', 'RPA', 'level_dung', 'message_dung', 'gold_log', 'log_sinh_ra'])
+            for d in sel:
+                w.writerow([d['id'], B(d)['verdict'], VERDICT_VI.get(B(d)['verdict'], ''), int(B(d)['pa0']), int(B(d)['pa1']), int(B(d)['ca']), int(B(d)['er']), int(B(d)['rpa']),
+                            int(lvl_ok(d)), int(msg_ok(d)), d['gold'], d['statement']])
+        for d in sel: d['verdict'] = B(d)['verdict']
+        render = (lambda d: f'mẫu AL-Bench `{d["id"]}` · `{B(d)["verdict"]}` ({VERDICT_VI.get(B(d)["verdict"], "")})', scode,
+                  lambda d: (f'- Metric của SCLogger: PA@1 **{int(B(d)["pa1"])}** (±1 dòng, cùng block) · PA đúng dòng {int(B(d)["pa0"])}'
+                             f' · nội dung (chỉ chấm khi PA@1 = 1): level {"đúng" if lvl_ok(d) else "sai"}, message {"đúng" if msg_ok(d) else "sai"}\n'
+                             f'- Verifier: CA {int(B(d)["ca"])} · ER {int(B(d)["er"])} · RPA {int(B(d)["rpa"])}'), sio)
+        cells = lambda d: [str(d['id']), f'`{B(d)["verdict"]}`', str(int(B(d)['pa0'])), str(int(B(d)['pa1'])), str(int(B(d)['ca'])), str(int(B(d)['er'])),
+                           str(int(B(d)['rpa'])), esc(d['gold']), esc(d['statement'])]
+        write_cases_md(folder, 'SCLogger (xấp xỉ)', t, sel, render, cells, ['id', 'verdict', 'PA', 'PA@1', 'CA', 'ER', 'RPA', 'log gold', 'log sinh ra'],
+                       lambda d: (len(Pp[d['id']]['lines']), d['id']))
+    diag = collections.Counter(B(d)['verdict'] for d in t4)
+    t1_both = sum(1 for d in t1 if isinstance(d.get('after'), dict) and d['after'].get('verdict') in ('invalid', 'invalid_insertion', 'out_of_range'))
+    def ex(sel, k, title, why):
+        sel = sorted(sel, key=lambda d: len(Pp[d['id']]['lines']))[k:k + 1]
+        return '\n'.join([f'#### {title} (mẫu AL-Bench `{d["id"]}`)\n\n{scode(d)}\n\n- Metric của SCLogger: PA@1 {int(B(d)["pa1"])} · Verifier: `{B(d)["verdict"]}` · CA {int(B(d)["ca"])} · ER {int(B(d)["er"])} · RPA {int(B(d)["rpa"])}\n- {why}\n' for d in sel])
+    L = ['# SCLogger (TÁI HIỆN XẤP XỈ): các trường hợp metric của SCLogger chấm sai', '',
+         '> ⚠️ **Đây là bản tái hiện XẤP XỈ**, không phải output gốc của SCLogger. Tác giả không công bố prompt, pipeline gọi LLM, dữ liệu hay output. Mọi con số và ví dụ trong thư mục này phải được gọi là "SCLogger (xấp xỉ)".', '',
+         '*Danh sách mọi ca: `cases/T1.md`, `T3.md`, `T4.md`, `T5.md` (bản dễ xem, có prompt, input, output) và `cases/*.csv`. Code: `analysis/sclogger_repro/sclogger_run.py`.*', '',
+         '## 1. Phương pháp và cách nó tự đánh giá', '',
+         '**Paper:** Li et al. *Go Static: Contextualized Logging Statement Generation*. FSE 2024. arXiv 2402.12958. Repo: `github.com/YichenLi00/SCLogger` (README: "Under Construction", lần push cuối 04/08/2024).', '',
+         '**Cách sinh log:** phân tích tĩnh toàn project để lấy (1) code slice: method gọi tới và được gọi trong vòng 2 bước, (2) log slice: log có thể chạy trước và sau, (3) danh sách biến dùng được; (4) chọn 5 ví dụ mẫu cùng project bằng BM25; (5) ghép thành prompt chain-of-thought gửi LLM, nhận `<Line Number>` và `<Statement>`; (6) lượt 2 "tinh chỉnh biến" với thông tin kiểu chi tiết.', '',
+         '**Metric của chính paper (M):**',
+         '- **Vị trí:** *"PA as 1 … if the distance between the predicted line number and the actual line number is less than or equal to one line and both … must be within the same block"* (§4.3.1). Giống hệt PDLogger.',
+         '- **Nội dung:** *"we only calculate the metrics for what-to-log when the logging position … is predicted correctly"* (§4.3.2).',
+         '- **Chạy được / điều kiện:** không kiểm.', '',
+         '## 2. Tái hiện thế nào, và trung thực tới đâu', '',
+         '| Thành phần | Bản này dùng | Mức trung thực |', '|---|---|---|',
+         '| Danh sách biến (§3.2.3) | **chính `Src/Var/AvaVarList.java` của tác giả**, biên dịch và chạy nguyên trạng (Eclipse JDT, source và jar Hadoop 3.4.0) | code của tác giả |',
+         '| 5 ví dụ mẫu (§3.3) | logic `bm25_selection` của tác giả (`Scripts/demo_case_selection.py`): tách từ camelCase, lấy top-5; BM25 của gensim 3.8.3 chép lại công thức (gensim 3.8.3 không cài được trên Python 3.12) | logic của tác giả |',
+         '| Call graph (§3.2.1) | java-callgraph (BCEL) trên jar Hadoop 3.4.0, đúng định dạng đầu vào mà `CodeSlicer.java` của tác giả đọc; paper dùng phân tích con trỏ nhạy ngữ cảnh | xấp xỉ |',
+         '| Code slice | method gọi tới và được gọi trong vòng 2 bước, chọn ngẫu nhiên 1 đường (quy tắc của paper); lấy source method như `MethodFinder.java` | quy tắc của paper, code của mình |',
+         '| Log slice (§3.2.2) | các câu log trong các method trên đường 2 bước đó (trước = method gọi tới, sau = method được gọi); công cụ log graph của paper không được công bố | xấp xỉ |',
+         '| Prompt (§3.4) | **chép từ hình Fig. 6** (không có bản text) | xấp xỉ |',
+         '| Tinh chỉnh biến (§3.5) | lượt 2 "Please rethink the variable usage with detailed type information about <Var>" kèm chữ ký thành viên của kiểu biến (paper in cả source class) | xấp xỉ |',
+         '| Backbone | **gpt-4o-mini**, temperature 0 (paper: gpt-3.5-turbo-0301, đã ngừng cung cấp) | khác |',
+         '| Chia dữ liệu | chia method 8:2 ngẫu nhiên (§4.1); ví dụ mẫu và các slice không dùng method test | như paper |', '',
+         '**Dữ liệu:** AL-Bench (`cleaned_static_test_data.json`), phần **main code của 11 module lõi Hadoop** (common, hdfs, hdfs-client, mapreduce-client-core/app, yarn-api/common/client/server-common/resourcemanager/nodemanager). Paper và code của tác giả cũng làm trên Hadoop (paper: 3.3.0; code `VarRefine.java` của tác giả trỏ tới jar Hadoop 3.3.6). Source **Hadoop 3.4.0** tải từ `archive.apache.org`; jar 3.4.0 từ Maven Central. Pool: 6.746 mẫu (3.830 method); train 5.457 mẫu; **lấy ngẫu nhiên 500 mẫu test**.', '',
+         '**Lộ vị trí:** input AL-Bench có dòng trống ở chỗ log bị xoá; ở đây **đã xoá dòng trống này**.', '',
+         '**Một điểm phải xử lý:** gpt-4o-mini thường **không theo định dạng** `<Line Number>: N <Statement>: …` mà trả về cả method đã chèn log. Mình **không sửa prompt**; output được đọc theo hai cách và ghi lại cách đọc cho từng mẫu: (1) đúng định dạng; (2) so code trả về với input để tìm log được chèn (lấy log đầu tiên nếu model chèn nhiều log).', '',
+         f'**Trạng thái 500 mẫu:** chấm được {st.get("ok", 0)} · không đọc được output {st.get("no_or_unparsable_output", 0)} · không chấm được {st.get("not_scorable", 0)} · thư viện parse bị crash {st.get("verifier_segfault", 0)}.', '',
+         '**Quy ước dòng:** các ví dụ mẫu trong prompt dùng nhãn "log nằm ở dòng N", tức chèn trước dòng N của input; đây là cách đọc chính. Cách đọc "chèn sau dòng N" cũng được tính để đối chiếu.', '',
+         '| Cách đọc N | PA đúng dòng | **PA@1 (metric SCLogger)** | RPA | CA | ER |', '|---|---:|---:|---:|---:|---:|',
+         f'| log ở dòng N (chính) | {mean("before","pa0"):.1f} | **{mean("before","pa1"):.1f}** | {mean("before","rpa"):.1f} | {mean("before","ca"):.1f} | {mean("before","er"):.1f} |',
+         f'| chèn sau dòng N | {mean("after","pa0"):.1f} | {mean("after","pa1"):.1f} | {mean("after","rpa"):.1f} | {mean("after","ca"):.1f} | {mean("after","er"):.1f} |', '',
+         f'**Đối chiếu thô với số đã công bố:** paper PDLogger chạy SCLogger trên Hadoop 3.4.1 và ActiveMQ được PA@1 = 0,417; bản xấp xỉ này được {mean("before","pa1")/100:.3f} trên Hadoop 3.4.0 (khác dữ liệu, khác backbone, khác prompt; chỉ để tham khảo).', '',
+         f'**Lỗi sai dưới cả hai cách đọc N:** {both}/{wrong} lỗi.', '',
+         '## 3. Tổng hợp các trường hợp sai', '',
+         '| Loại | Số ca | Ghi chú |', '|---|---:|---|',
+         f'| **T1** PA@1 chấm đúng nhưng log **không chạy được** | **{len(t1)}** | theo M của SCLogger, các ca này còn được **cộng điểm nội dung** vì nội dung chỉ chấm khi PA@1 = 1 |',
+         '| **T2** nội dung được tính đúng dù in sai lúc | — | nội dung chỉ chấm khi PA@1 = 1, nên không có loại này |',
+         f'| **T3** PA@1 chấm 0 cho log đặt đúng | **{len(t3)}** | |',
+         f'| **T4** cùng điểm 0 cho mọi kiểu sai | {len(t4)} | xem bảng chẩn đoán |',
+         f'| **T5** PA@1 chấm đúng nhưng sai thứ tự | {len(t5)} | minh hoạ |', '',
+         '**Chẩn đoán các ca PA@1 = 0 và RPA = 0:**', '', '| Verdict | Ý nghĩa | Số ca |', '|---|---|---:|',
+         *[f'| `{k}` | {VERDICT_VI.get(k, k)} | {c} |' for k, c in diag.most_common()], '',
+         '## 4. Ví dụ', '', '### T1. PA@1 chấm đúng nhưng log không chạy được → cần ER', '',
+         f'*Lưu ý khi đọc T1: {t1_both}/{len(t1)} ca vẫn không chạy được nếu đọc N theo cách "chèn sau dòng N". Đọc câu trả lời thô thấy model thường **đếm sai dòng** (ví dụ viết "thêm sau câu gán X, ở dòng 11" nhưng dòng 11 lại là chính câu gán X). Prompt của SCLogger (theo Fig. 6) đưa code **không đánh số dòng** nhưng bắt model trả số dòng; AL-Bench cũng nhận xét "LLM không giỏi đếm số dòng". Lỗi này thuộc thiết kế của SCLogger, nhưng độ lớn của nó có thể khác ở SCLogger gốc.*', '',
+         ex(t1, 0, 'Ví dụ T1-a', 'Log lệch ≤ 1 dòng, cùng block nên PA@1 = 1, và theo SCLogger còn được chấm nội dung; nhưng log không chạy được (đọc code để thấy lý do: nằm sau return/throw hoặc in biến khai báo phía sau).'),
+         ex(t1, 1, 'Ví dụ T1-b', 'Tương tự.'), '',
+         '### T3. PA@1 chấm 0 cho log đặt đúng → cần RPA / CA', '',
+         ex(t3, 0, 'Ví dụ T3-a', 'Vị trí lệch nhưng cùng điều kiện, chạy được, không vượt qua câu lệnh làm đổi điều log mô tả.'), '',
+         '### T4. Cùng điểm 0 cho mọi kiểu sai → cần CA (chẩn đoán)', '',
+         ex([d for d in t4 if B(d)['verdict'] == 'wrong_condition:weaker'], 0, 'Ví dụ T4-a: in quá thường (loại lỗi phổ biến nhất)', 'Log bị đặt ra ngoài điều kiện của developer.'),
+         ex([d for d in t4 if B(d)['verdict'] == 'wrong_condition:disjoint'], 0, 'Ví dụ T4-b: nhầm nhánh', 'Hai log không bao giờ cùng in.'), '',
+         '### T5. PA@1 chấm đúng nhưng sai thứ tự (minh hoạ)', '',
+         ex(t5, 0, 'Ví dụ T5-a', 'Log vượt qua một thao tác; tranh cãi được.'), '',
+         'Prompt, input và output đầy đủ của từng ca: xem `cases/T*.md`.', '',
+         '## 5. Giới hạn', '',
+         '- **Bản xấp xỉ**: prompt chép từ hình, backbone khác (gpt-4o-mini), log slice và call graph xấp xỉ, gpt-4o-mini thường không theo định dạng nên phải đọc vị trí từ code trả về. Lỗi ở đây chưa chắc là lỗi của SCLogger gốc.',
+         '- `AvaVarList.java` của tác giả khớp method theo **tên**: nếu một file có nhiều class con cùng có method trùng tên, biến của các method đó bị gộp vào danh sách. Giữ nguyên hành vi này.',
+         '- Chỉ chạy 500 mẫu, chỉ trên Hadoop.',
+         '- Tham chiếu "sai" là verifier của mình, so với một log gold.',
+         '- Muốn chính xác cần xin tác giả prompt, pipeline hoặc output.', '']
+    (folder/'README.md').write_text('\n'.join(L))
+    return dict(ok=len(ok), T1=len(t1), T3=len(t3), T4=len(t4), T5=len(t5), pa1=mean('before', 'pa1'))
 
 
-def build_overview(tool_stats, pdl):
+def build_overview(tool_stats, pdl, scl=None):
     alln = {k: v for k, v in tool_stats.items()}
     rows = []
     for name, s in alln.items():
         rows.append(f'| [{name}]({name}/README.md) | khớp chính xác | {s["ok"]:,} | {s["types"].get("T1", 0):,} (vị trí trùng y hệt: {s["t1_exact"]}) | {s["types"].get("T2", 0):,} | **{s["types"].get("T3", 0):,}** | {s["types"].get("T4", 0):,} | {s["types"].get("T5", 0):,} |')
+    if scl:
+        rows.insert(0, f'| [SCLogger](SCLogger/README.md) (**tái hiện xấp xỉ**, 500 mẫu Hadoop) | ±1 dòng, cùng block | {scl["ok"]} | **{scl["T1"]}** (PA@1 = 1) | — | {scl["T3"]} | {scl["T4"]} | {scl["T5"]} |')
     rows.insert(0, f'| [PDLogger](PDLogger/README.md) (tự tái hiện) | ±1 dòng, cùng block | {pdl["ok"]} | **{pdl["T1"]}** (PA@1 = 1) | — | {pdl["T3"]} (4 ca thật) | {pdl["T4"]} | {pdl["T5"]} |')
     L = ['# Các trường hợp metric của các công cụ sinh log chấm sai output của chính chúng', '',
          '*Tổng hợp cho thầy nhận xét, 15/10/2026. Mỗi công cụ có một thư mục riêng gồm `README.md` (phương pháp, metric của paper, dữ liệu lấy ở đâu, bảng số, ví dụ theo từng loại, giới hạn) và `cases/` (mỗi loại có `T*.md` dễ xem và `T*.csv` đầy đủ). Toàn bộ sinh tự động từ dữ liệu chấm lại bằng `build.py`, không chép tay.*', '',
          '## 1. Mục đích', '',
          'Trước khi đề xuất metric mới, cần chứng minh **metric hiện có không đánh giá đúng**. Chuỗi lập luận:', '',
          '> **Công cụ X tự đánh giá bằng metric M → M chấm sai trên output thật của X (có số, có ví dụ) → lặp lại cho nhiều X → đề xuất metric mới (CA, ER, RPA).**', '',
-         'Thư mục này là phần "M chấm sai trên output thật của X" cho 6 công cụ: PDLogger, LANCE, LANCE 2.0, LEONID, FastLog, UniLog. SCLogger chưa có output (xem `SCLogger/`).', '',
+         'Thư mục này là phần "M chấm sai trên output thật của X" cho 7 công cụ: PDLogger (tự tái hiện), LANCE, LANCE 2.0, LEONID, FastLog, UniLog (output gốc), và **SCLogger (tái hiện xấp xỉ trên Hadoop, vì tác giả không công bố prompt và output; xem `SCLogger/`)**.', '',
          '## 2. Mỗi công cụ tự đánh giá thế nào (M)', '',
          '| Công cụ | Năm | Metric vị trí của paper | Level / message chấm khi nào | Kiểm log chạy được? | Kiểm điều kiện thực thi? |', '|---|---|---|---|---|---|',
          '| LANCE | ICSE 2022 | khớp chính xác (token) | độc lập với vị trí | chỉ đếm không parse được | không |',
@@ -580,7 +686,7 @@ def build_overview(tool_stats, pdl):
          '## 7. Câu hỏi muốn xin ý kiến thầy', '',
          '1. Các loại T1–T4 có đủ thuyết phục để làm phần "motivation" trước khi đề xuất CA / ER / RPA không?',
          '2. Phát hiện về **dòng trống của AL-Bench** (làm khoảng 23% output UniLog bị chấm sai vị trí) có nên đưa vào bài như một phát hiện về benchmark không?',
-         '3. Có nên tái hiện SCLogger trên AL-Bench (bản xấp xỉ, prompt chép từ hình), hay email xin output của tác giả?', '',
+         '3. SCLogger đã có **bản tái hiện xấp xỉ** (500 mẫu Hadoop, dùng code phân tích tĩnh và chọn ví dụ mẫu của tác giả, prompt chép từ hình, gpt-4o-mini). Có nên email tác giả xin prompt / output để thay bằng bản chính xác không?', '',
          '## 8. Cách tạo lại', '',
          '```bash', 'cd analysis/external_methods', 'python rescore_lance.py lance     # tương tự: lance2, leonid, fastlog, al_lance, al_leonid, al_fastlog',
          'python rescore_unilog.py deepseek_base   # và warmup_cl', 'cd ../TRUONG_HOP_SAI && python build.py', '```', '']
@@ -592,5 +698,5 @@ if __name__ == '__main__':
     for name, cfg in TOOLS.items():
         ts[name] = build_tool(name, cfg); print(name, dict(ts[name]['types']), ts[name]['ok'])
     pdl = build_pdlogger(); print('PDLogger', pdl)
-    build_sclogger()
-    build_overview(ts, pdl)
+    scl = build_sclogger(); print('SCLogger', scl)
+    build_overview(ts, pdl, scl)

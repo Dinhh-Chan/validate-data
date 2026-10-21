@@ -1,0 +1,5 @@
+albench_id,verdict_verifier,giai_thich,PA,SCLogger_PA@1,CA,ER,RPA,level_dung,message_dung,gold_log,log_sinh_ra
+15178,invalid,không chạy được,0,1,1,0,0,1,0,"LOG.debug(""Keystore hasn't changed, returning."");","LOG.debug(""No changes detected, skipping flush."");"
+13171,invalid,không chạy được,0,1,1,0,0,1,0,"LOG.debug(""using cgroup parent: {}"", cGroupPath);","LOG.debug(""using cgroup parent: "" + cGroupPath);"
+23363,invalid,không chạy được,0,1,1,0,0,1,0,"LOG.info(""Nothing to flush"");","LOG.info(""Flush and sync called, but double buffer is already flushed."");"
+14841,invalid,không chạy được,0,1,1,0,0,0,0,"LOG.debug(""Stacktrace: "", new Throwable());","LOG.info(""Registered MBean for source "" + name);"

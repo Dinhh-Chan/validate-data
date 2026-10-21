@@ -8,7 +8,7 @@ Trước khi đề xuất metric mới, cần chứng minh **metric hiện có k
 
 > **Công cụ X tự đánh giá bằng metric M → M chấm sai trên output thật của X (có số, có ví dụ) → lặp lại cho nhiều X → đề xuất metric mới (CA, ER, RPA).**
 
-Thư mục này là phần "M chấm sai trên output thật của X" cho 6 công cụ: PDLogger, LANCE, LANCE 2.0, LEONID, FastLog, UniLog. SCLogger chưa có output (xem `SCLogger/`).
+Thư mục này là phần "M chấm sai trên output thật của X" cho 7 công cụ: PDLogger (tự tái hiện), LANCE, LANCE 2.0, LEONID, FastLog, UniLog (output gốc), và **SCLogger (tái hiện xấp xỉ trên Hadoop, vì tác giả không công bố prompt và output; xem `SCLogger/`)**.
 
 ## 2. Mỗi công cụ tự đánh giá thế nào (M)
 
@@ -43,6 +43,7 @@ Trích dẫn nguyên văn cho từng ô: `analysis/logging_condition_study/KHAO_
 | Công cụ | Metric vị trí của paper | Mẫu chấm được | **T1** cho điểm nhưng không chạy được | **T2** cộng điểm level/message cho log in sai lúc | **T3** chấm oan log đúng | **T4** vị trí sai, cùng điểm 0 | T5 sai thứ tự |
 |---|---|---:|---|---:|---:|---:|---:|
 | [PDLogger](PDLogger/README.md) (tự tái hiện) | ±1 dòng, cùng block | 846 | **30** (PA@1 = 1) | — | 5 (4 ca thật) | 561 | 56 |
+| [SCLogger](SCLogger/README.md) (**tái hiện xấp xỉ**, 500 mẫu Hadoop) | ±1 dòng, cùng block | 431 | **4** (PA@1 = 1) | — | 11 | 305 | 14 |
 | [LANCE](LANCE/README.md) | khớp chính xác | 10,500 | 53 (vị trí trùng y hệt: 24) | 848 | **147** | 2,902 | 19 |
 | [LANCE_2.0](LANCE_2.0/README.md) | khớp chính xác | 27,197 | 35 (vị trí trùng y hệt: 19) | 836 | **385** | 3,994 | 61 |
 | [LEONID](LEONID/README.md) | khớp chính xác | 27,191 | 32 (vị trí trùng y hệt: 17) | 824 | **406** | 3,941 | 98 |
@@ -77,9 +78,13 @@ Link gốc (repo, Google Drive) ghi trong README của từng công cụ.
 4. **PDLogger là bản tái hiện** (gpt-4o-mini, không Joern). Các công cụ khác dùng output gốc của tác giả hoặc của AL-Bench.
 5. **T5 tranh cãi được**, chỉ dùng để minh hoạ.
 
+## 7. Câu hỏi muốn xin ý kiến thầy
 
+1. Các loại T1–T4 có đủ thuyết phục để làm phần "motivation" trước khi đề xuất CA / ER / RPA không?
+2. Phát hiện về **dòng trống của AL-Bench** (làm khoảng 23% output UniLog bị chấm sai vị trí) có nên đưa vào bài như một phát hiện về benchmark không?
+3. SCLogger đã có **bản tái hiện xấp xỉ** (500 mẫu Hadoop, dùng code phân tích tĩnh và chọn ví dụ mẫu của tác giả, prompt chép từ hình, gpt-4o-mini). Có nên email tác giả xin prompt / output để thay bằng bản chính xác không?
 
-## 7. Cách tạo lại
+## 8. Cách tạo lại
 
 ```bash
 cd analysis/external_methods
